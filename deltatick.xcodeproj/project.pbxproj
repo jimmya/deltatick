@@ -1,0 +1,1012 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A76B7002CBFF70107F0509B /* Pods_deltatick_deltatickTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92C55144FBBA9F6AA8AA27A /* Pods_deltatick_deltatickTests.framework */; };
+		A1AB3B1E0BBD5D6691EAA9C0 /* Pods_deltatick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7841607B5AAF56283E803D99 /* Pods_deltatick.framework */; };
+		BF56F56E206535CA00E77CE2 /* AutoStartupHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F56D206535CA00E77CE2 /* AutoStartupHelper.swift */; };
+		BF56F57420653F0200E77CE2 /* SyncViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F57020653F0200E77CE2 /* SyncViewControllerTests.swift */; };
+		BF56F57520653F0200E77CE2 /* SyncInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F57120653F0200E77CE2 /* SyncInteractorTests.swift */; };
+		BF56F57620653F0200E77CE2 /* SyncWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F57220653F0200E77CE2 /* SyncWorkerTests.swift */; };
+		BF56F57720653F0200E77CE2 /* SyncPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F57320653F0200E77CE2 /* SyncPresenterTests.swift */; };
+		BF56F57920654B0600E77CE2 /* DelayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F57820654B0600E77CE2 /* DelayHelper.swift */; };
+		BF56F57C2065570000E77CE2 /* CreateMigrationToken.json in Resources */ = {isa = PBXBuildFile; fileRef = BF56F57B2065570000E77CE2 /* CreateMigrationToken.json */; };
+		BF82EA9720643E650024AEE6 /* RefreshInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82EA9620643E650024AEE6 /* RefreshInterval.swift */; };
+		BF82EA9C2065162E0024AEE6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF82EA9B2065162E0024AEE6 /* Localizable.strings */; };
+		BF82EA9E2065164B0024AEE6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82EA9D2065164B0024AEE6 /* String+Extension.swift */; };
+		BF82EAA0206519A90024AEE6 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82EA9F206519A90024AEE6 /* Portfolio.swift */; };
+		BF82EAA2206519B30024AEE6 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82EAA1206519B30024AEE6 /* Balance.swift */; };
+		BF82EAA420651B4D0024AEE6 /* MetricType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82EAA320651B4D0024AEE6 /* MetricType.swift */; };
+		BF82EAAC20652ED70024AEE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82EAAB20652ED70024AEE6 /* AppDelegate.swift */; };
+		BF82EAAE20652ED70024AEE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF82EAAD20652ED70024AEE6 /* Assets.xcassets */; };
+		BF82EAB120652ED70024AEE6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF82EAAF20652ED70024AEE6 /* MainMenu.xib */; };
+		BF82EAB820652F500024AEE6 /* deltatickLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF82EAA920652ED70024AEE6 /* deltatickLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BF82EABA20652F6C0024AEE6 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF82EAB920652F6C0024AEE6 /* ServiceManagement.framework */; };
+		BFC3B7EC2062B4D8003BCAF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B7EB2062B4D8003BCAF1 /* AppDelegate.swift */; };
+		BFC3B7EE2062B4D8003BCAF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC3B7ED2062B4D8003BCAF1 /* Assets.xcassets */; };
+		BFC3B7F12062B4D8003BCAF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFC3B7EF2062B4D8003BCAF1 /* MainMenu.xib */; };
+		BFC3B7FD2062B4D8003BCAF1 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B7FC2062B4D8003BCAF1 /* TestHelper.swift */; };
+		BFC3B8102062B631003BCAF1 /* DeltaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B80F2062B631003BCAF1 /* DeltaAPI.swift */; };
+		BFC3B8142062B79D003BCAF1 /* AuthenticationPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B8132062B79D003BCAF1 /* AuthenticationPlugin.swift */; };
+		BFC3B8162062B839003BCAF1 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B8152062B839003BCAF1 /* RegisterRequest.swift */; };
+		BFC3B8212062BFA4003BCAF1 /* StatusItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B81B2062BFA4003BCAF1 /* StatusItemPresenter.swift */; };
+		BFC3B8222062BFA4003BCAF1 /* StatusItemWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B81C2062BFA4003BCAF1 /* StatusItemWorker.swift */; };
+		BFC3B8232062BFA4003BCAF1 /* StatusItemRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B81D2062BFA4003BCAF1 /* StatusItemRouter.swift */; };
+		BFC3B8242062BFA4003BCAF1 /* StatusItemModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B81E2062BFA4003BCAF1 /* StatusItemModels.swift */; };
+		BFC3B8252062BFA4003BCAF1 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B81F2062BFA4003BCAF1 /* StatusItemController.swift */; };
+		BFC3B8262062BFA4003BCAF1 /* StatusItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B8202062BFA4003BCAF1 /* StatusItemInteractor.swift */; };
+		BFC3B8292062C221003BCAF1 /* KeychainSwift+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B8282062C221003BCAF1 /* KeychainSwift+Extension.swift */; };
+		BFC3B82B20638401003BCAF1 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B82A20638401003BCAF1 /* RegisterResponse.swift */; };
+		BFC3B82F20638423003BCAF1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B82E20638423003BCAF1 /* Device.swift */; };
+		BFC3B8312063876E003BCAF1 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B8302063876E003BCAF1 /* UserDefaults+Extension.swift */; };
+		BFC3B8332063884A003BCAF1 /* MigrationTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B8322063884A003BCAF1 /* MigrationTokenResponse.swift */; };
+		BFC3B83520638D9A003BCAF1 /* MigrationTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B83420638D9A003BCAF1 /* MigrationTokenRequest.swift */; };
+		BFC3B83A20639012003BCAF1 /* SyncViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFC3B83820639012003BCAF1 /* SyncViewController.xib */; };
+		BFE5B97D2063B2530091F5B4 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B97C2063B2530091F5B4 /* NSImage+Extension.swift */; };
+		BFE5B97F2063B7930091F5B4 /* MigrationStatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B97E2063B7930091F5B4 /* MigrationStatusResponse.swift */; };
+		BFE5B9812063B83A0091F5B4 /* MigrationStatusRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B9802063B83A0091F5B4 /* MigrationStatusRequest.swift */; };
+		BFE5B9882063B8C50091F5B4 /* SyncPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B9822063B8C50091F5B4 /* SyncPresenter.swift */; };
+		BFE5B9892063B8C50091F5B4 /* SyncWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B9832063B8C50091F5B4 /* SyncWorker.swift */; };
+		BFE5B98A2063B8C50091F5B4 /* SyncRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B9842063B8C50091F5B4 /* SyncRouter.swift */; };
+		BFE5B98B2063B8C50091F5B4 /* SyncModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B9852063B8C50091F5B4 /* SyncModels.swift */; };
+		BFE5B98C2063B8C50091F5B4 /* SyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B9862063B8C50091F5B4 /* SyncViewController.swift */; };
+		BFE5B98D2063B8C50091F5B4 /* SyncInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B9872063B8C50091F5B4 /* SyncInteractor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFC3B7F92062B4D8003BCAF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFC3B7E02062B4D8003BCAF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFC3B7E72062B4D8003BCAF1;
+			remoteInfo = deltatick;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BF82EAB720652F310024AEE6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				BF82EAB820652F500024AEE6 /* deltatickLauncher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07B7E19B7B9EDC2FBC233C33 /* Pods-deltatick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deltatick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-deltatick/Pods-deltatick.debug.xcconfig"; sourceTree = "<group>"; };
+		099B325CCCDCD2B2C74E559F /* Pods-deltatick-deltatickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deltatick-deltatickTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-deltatick-deltatickTests/Pods-deltatick-deltatickTests.release.xcconfig"; sourceTree = "<group>"; };
+		7841607B5AAF56283E803D99 /* Pods_deltatick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_deltatick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8294504A8B297E3B102A43B2 /* Pods-deltatick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deltatick.release.xcconfig"; path = "Pods/Target Support Files/Pods-deltatick/Pods-deltatick.release.xcconfig"; sourceTree = "<group>"; };
+		A958D0CC74A006DEB2F12D72 /* Pods-deltatick-deltatickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deltatick-deltatickTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-deltatick-deltatickTests/Pods-deltatick-deltatickTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF56F56D206535CA00E77CE2 /* AutoStartupHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoStartupHelper.swift; sourceTree = "<group>"; };
+		BF56F57020653F0200E77CE2 /* SyncViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncViewControllerTests.swift; sourceTree = "<group>"; };
+		BF56F57120653F0200E77CE2 /* SyncInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncInteractorTests.swift; sourceTree = "<group>"; };
+		BF56F57220653F0200E77CE2 /* SyncWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncWorkerTests.swift; sourceTree = "<group>"; };
+		BF56F57320653F0200E77CE2 /* SyncPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncPresenterTests.swift; sourceTree = "<group>"; };
+		BF56F57820654B0600E77CE2 /* DelayHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayHelper.swift; sourceTree = "<group>"; };
+		BF56F57B2065570000E77CE2 /* CreateMigrationToken.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CreateMigrationToken.json; sourceTree = "<group>"; };
+		BF82EA9620643E650024AEE6 /* RefreshInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshInterval.swift; sourceTree = "<group>"; };
+		BF82EA9B2065162E0024AEE6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		BF82EA9D2065164B0024AEE6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		BF82EA9F206519A90024AEE6 /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
+		BF82EAA1206519B30024AEE6 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		BF82EAA320651B4D0024AEE6 /* MetricType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricType.swift; sourceTree = "<group>"; };
+		BF82EAA920652ED70024AEE6 /* deltatickLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deltatickLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF82EAAB20652ED70024AEE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF82EAAD20652ED70024AEE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF82EAB020652ED70024AEE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BF82EAB220652ED70024AEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF82EAB320652ED70024AEE6 /* deltatickLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = deltatickLauncher.entitlements; sourceTree = "<group>"; };
+		BF82EAB920652F6C0024AEE6 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		BFC3B7E82062B4D8003BCAF1 /* deltatick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deltatick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC3B7EB2062B4D8003BCAF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFC3B7ED2062B4D8003BCAF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFC3B7F02062B4D8003BCAF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BFC3B7F22062B4D8003BCAF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC3B7F32062B4D8003BCAF1 /* deltatick.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = deltatick.entitlements; sourceTree = "<group>"; };
+		BFC3B7F82062B4D8003BCAF1 /* deltatickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deltatickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC3B7FC2062B4D8003BCAF1 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		BFC3B7FE2062B4D9003BCAF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC3B80F2062B631003BCAF1 /* DeltaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeltaAPI.swift; sourceTree = "<group>"; };
+		BFC3B8132062B79D003BCAF1 /* AuthenticationPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPlugin.swift; sourceTree = "<group>"; };
+		BFC3B8152062B839003BCAF1 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		BFC3B81B2062BFA4003BCAF1 /* StatusItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemPresenter.swift; sourceTree = "<group>"; };
+		BFC3B81C2062BFA4003BCAF1 /* StatusItemWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemWorker.swift; sourceTree = "<group>"; };
+		BFC3B81D2062BFA4003BCAF1 /* StatusItemRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemRouter.swift; sourceTree = "<group>"; };
+		BFC3B81E2062BFA4003BCAF1 /* StatusItemModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemModels.swift; sourceTree = "<group>"; };
+		BFC3B81F2062BFA4003BCAF1 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		BFC3B8202062BFA4003BCAF1 /* StatusItemInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemInteractor.swift; sourceTree = "<group>"; };
+		BFC3B8282062C221003BCAF1 /* KeychainSwift+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeychainSwift+Extension.swift"; sourceTree = "<group>"; };
+		BFC3B82A20638401003BCAF1 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		BFC3B82E20638423003BCAF1 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		BFC3B8302063876E003BCAF1 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		BFC3B8322063884A003BCAF1 /* MigrationTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationTokenResponse.swift; sourceTree = "<group>"; };
+		BFC3B83420638D9A003BCAF1 /* MigrationTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationTokenRequest.swift; sourceTree = "<group>"; };
+		BFC3B83820639012003BCAF1 /* SyncViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SyncViewController.xib; sourceTree = "<group>"; };
+		BFE5B97C2063B2530091F5B4 /* NSImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
+		BFE5B97E2063B7930091F5B4 /* MigrationStatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationStatusResponse.swift; sourceTree = "<group>"; };
+		BFE5B9802063B83A0091F5B4 /* MigrationStatusRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationStatusRequest.swift; sourceTree = "<group>"; };
+		BFE5B9822063B8C50091F5B4 /* SyncPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncPresenter.swift; sourceTree = "<group>"; };
+		BFE5B9832063B8C50091F5B4 /* SyncWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncWorker.swift; sourceTree = "<group>"; };
+		BFE5B9842063B8C50091F5B4 /* SyncRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncRouter.swift; sourceTree = "<group>"; };
+		BFE5B9852063B8C50091F5B4 /* SyncModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncModels.swift; sourceTree = "<group>"; };
+		BFE5B9862063B8C50091F5B4 /* SyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncViewController.swift; sourceTree = "<group>"; };
+		BFE5B9872063B8C50091F5B4 /* SyncInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncInteractor.swift; sourceTree = "<group>"; };
+		F92C55144FBBA9F6AA8AA27A /* Pods_deltatick_deltatickTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_deltatick_deltatickTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF82EAA620652ED70024AEE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC3B7E52062B4D8003BCAF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF82EABA20652F6C0024AEE6 /* ServiceManagement.framework in Frameworks */,
+				A1AB3B1E0BBD5D6691EAA9C0 /* Pods_deltatick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC3B7F52062B4D8003BCAF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A76B7002CBFF70107F0509B /* Pods_deltatick_deltatickTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F689A304B282DC27693B28D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07B7E19B7B9EDC2FBC233C33 /* Pods-deltatick.debug.xcconfig */,
+				8294504A8B297E3B102A43B2 /* Pods-deltatick.release.xcconfig */,
+				A958D0CC74A006DEB2F12D72 /* Pods-deltatick-deltatickTests.debug.xcconfig */,
+				099B325CCCDCD2B2C74E559F /* Pods-deltatick-deltatickTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF56F56F20653EE700E77CE2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BF56F57A2065568B00E77CE2 /* Resources */,
+				BF56F57020653F0200E77CE2 /* SyncViewControllerTests.swift */,
+				BF56F57120653F0200E77CE2 /* SyncInteractorTests.swift */,
+				BF56F57220653F0200E77CE2 /* SyncWorkerTests.swift */,
+				BF56F57320653F0200E77CE2 /* SyncPresenterTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		BF56F57A2065568B00E77CE2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF56F57B2065570000E77CE2 /* CreateMigrationToken.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BF82EAAA20652ED70024AEE6 /* deltatickLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				BF82EAAB20652ED70024AEE6 /* AppDelegate.swift */,
+				BF82EAAD20652ED70024AEE6 /* Assets.xcassets */,
+				BF82EAAF20652ED70024AEE6 /* MainMenu.xib */,
+				BF82EAB220652ED70024AEE6 /* Info.plist */,
+				BF82EAB320652ED70024AEE6 /* deltatickLauncher.entitlements */,
+			);
+			path = deltatickLauncher;
+			sourceTree = "<group>";
+		};
+		BFC3B7DF2062B4D8003BCAF1 = {
+			isa = PBXGroup;
+			children = (
+				BFC3B7EA2062B4D8003BCAF1 /* deltatick */,
+				BFC3B7FB2062B4D8003BCAF1 /* deltatickTests */,
+				BF82EAAA20652ED70024AEE6 /* deltatickLauncher */,
+				BFC3B7E92062B4D8003BCAF1 /* Products */,
+				2F689A304B282DC27693B28D /* Pods */,
+				E5923504727EE711298F5635 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BFC3B7E92062B4D8003BCAF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B7E82062B4D8003BCAF1 /* deltatick.app */,
+				BFC3B7F82062B4D8003BCAF1 /* deltatickTests.xctest */,
+				BF82EAA920652ED70024AEE6 /* deltatickLauncher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFC3B7EA2062B4D8003BCAF1 /* deltatick */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B80B2062B5BE003BCAF1 /* Resources */,
+				BFC3B8072062B5AC003BCAF1 /* Source */,
+				BFC3B8092062B5B4003BCAF1 /* Supporting Files */,
+			);
+			path = deltatick;
+			sourceTree = "<group>";
+		};
+		BFC3B7FB2062B4D8003BCAF1 /* deltatickTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B7FC2062B4D8003BCAF1 /* TestHelper.swift */,
+				BFC3B7FE2062B4D9003BCAF1 /* Info.plist */,
+			);
+			path = deltatickTests;
+			sourceTree = "<group>";
+		};
+		BFC3B8072062B5AC003BCAF1 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B8082062B5B0003BCAF1 /* Application */,
+				BFC3B8172062B92D003BCAF1 /* Extensions */,
+				BFC3B80E2062B617003BCAF1 /* Networking */,
+				BFC3B81A2062BF81003BCAF1 /* Scenes */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		BFC3B8082062B5B0003BCAF1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B7EB2062B4D8003BCAF1 /* AppDelegate.swift */,
+				BF56F57820654B0600E77CE2 /* DelayHelper.swift */,
+				BF56F56D206535CA00E77CE2 /* AutoStartupHelper.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BFC3B8092062B5B4003BCAF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B7F32062B4D8003BCAF1 /* deltatick.entitlements */,
+				BFC3B7F22062B4D8003BCAF1 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFC3B80B2062B5BE003BCAF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B7ED2062B4D8003BCAF1 /* Assets.xcassets */,
+				BFC3B7EF2062B4D8003BCAF1 /* MainMenu.xib */,
+				BF82EA9B2065162E0024AEE6 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BFC3B80E2062B617003BCAF1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B8122062B639003BCAF1 /* Plugins */,
+				BFC3B8112062B634003BCAF1 /* Models */,
+				BFC3B80F2062B631003BCAF1 /* DeltaAPI.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BFC3B8112062B634003BCAF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B8152062B839003BCAF1 /* RegisterRequest.swift */,
+				BFC3B82A20638401003BCAF1 /* RegisterResponse.swift */,
+				BFC3B82E20638423003BCAF1 /* Device.swift */,
+				BFC3B83420638D9A003BCAF1 /* MigrationTokenRequest.swift */,
+				BFC3B8322063884A003BCAF1 /* MigrationTokenResponse.swift */,
+				BFE5B9802063B83A0091F5B4 /* MigrationStatusRequest.swift */,
+				BFE5B97E2063B7930091F5B4 /* MigrationStatusResponse.swift */,
+				BF82EA9620643E650024AEE6 /* RefreshInterval.swift */,
+				BF82EAA320651B4D0024AEE6 /* MetricType.swift */,
+				BF82EA9F206519A90024AEE6 /* Portfolio.swift */,
+				BF82EAA1206519B30024AEE6 /* Balance.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFC3B8122062B639003BCAF1 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B8132062B79D003BCAF1 /* AuthenticationPlugin.swift */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		BFC3B8172062B92D003BCAF1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B8282062C221003BCAF1 /* KeychainSwift+Extension.swift */,
+				BFC3B8302063876E003BCAF1 /* UserDefaults+Extension.swift */,
+				BFE5B97C2063B2530091F5B4 /* NSImage+Extension.swift */,
+				BF82EA9D2065164B0024AEE6 /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BFC3B81A2062BF81003BCAF1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B83620638FEB003BCAF1 /* Sync */,
+				BFC3B8272062BFA9003BCAF1 /* StatusItem */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BFC3B8272062BFA9003BCAF1 /* StatusItem */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3B81B2062BFA4003BCAF1 /* StatusItemPresenter.swift */,
+				BFC3B81C2062BFA4003BCAF1 /* StatusItemWorker.swift */,
+				BFC3B81D2062BFA4003BCAF1 /* StatusItemRouter.swift */,
+				BFC3B81E2062BFA4003BCAF1 /* StatusItemModels.swift */,
+				BFC3B81F2062BFA4003BCAF1 /* StatusItemController.swift */,
+				BFC3B8202062BFA4003BCAF1 /* StatusItemInteractor.swift */,
+			);
+			path = StatusItem;
+			sourceTree = "<group>";
+		};
+		BFC3B83620638FEB003BCAF1 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				BFE5B9822063B8C50091F5B4 /* SyncPresenter.swift */,
+				BFE5B9832063B8C50091F5B4 /* SyncWorker.swift */,
+				BFE5B9842063B8C50091F5B4 /* SyncRouter.swift */,
+				BFE5B9852063B8C50091F5B4 /* SyncModels.swift */,
+				BFE5B9862063B8C50091F5B4 /* SyncViewController.swift */,
+				BFE5B9872063B8C50091F5B4 /* SyncInteractor.swift */,
+				BFC3B83820639012003BCAF1 /* SyncViewController.xib */,
+				BF56F56F20653EE700E77CE2 /* Tests */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
+		E5923504727EE711298F5635 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF82EAB920652F6C0024AEE6 /* ServiceManagement.framework */,
+				7841607B5AAF56283E803D99 /* Pods_deltatick.framework */,
+				F92C55144FBBA9F6AA8AA27A /* Pods_deltatick_deltatickTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF82EAA820652ED70024AEE6 /* deltatickLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF82EAB420652ED70024AEE6 /* Build configuration list for PBXNativeTarget "deltatickLauncher" */;
+			buildPhases = (
+				BF82EAA520652ED70024AEE6 /* Sources */,
+				BF82EAA620652ED70024AEE6 /* Frameworks */,
+				BF82EAA720652ED70024AEE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = deltatickLauncher;
+			productName = deltatickLauncher;
+			productReference = BF82EAA920652ED70024AEE6 /* deltatickLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFC3B7E72062B4D8003BCAF1 /* deltatick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFC3B8012062B4D9003BCAF1 /* Build configuration list for PBXNativeTarget "deltatick" */;
+			buildPhases = (
+				BDD0B2D4961346FE1BAA1DAE /* [CP] Check Pods Manifest.lock */,
+				BFC3B7E42062B4D8003BCAF1 /* Sources */,
+				BFC3B7E52062B4D8003BCAF1 /* Frameworks */,
+				BFC3B7E62062B4D8003BCAF1 /* Resources */,
+				BF82EAB720652F310024AEE6 /* CopyFiles */,
+				9B349990C4AF41F89B04FF27 /* [CP] Embed Pods Frameworks */,
+				F778BB45F737B8B630AEB86D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = deltatick;
+			productName = deltatick;
+			productReference = BFC3B7E82062B4D8003BCAF1 /* deltatick.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFC3B7F72062B4D8003BCAF1 /* deltatickTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFC3B8042062B4D9003BCAF1 /* Build configuration list for PBXNativeTarget "deltatickTests" */;
+			buildPhases = (
+				8EE7F20F3FF44FDFEBE1DFF5 /* [CP] Check Pods Manifest.lock */,
+				BFC3B7F42062B4D8003BCAF1 /* Sources */,
+				BFC3B7F52062B4D8003BCAF1 /* Frameworks */,
+				BFC3B7F62062B4D8003BCAF1 /* Resources */,
+				9370413C2D2E2555243A0B2A /* [CP] Embed Pods Frameworks */,
+				D7EDE338553A2EFD143E7051 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFC3B7FA2062B4D8003BCAF1 /* PBXTargetDependency */,
+			);
+			name = deltatickTests;
+			productName = deltatickTests;
+			productReference = BFC3B7F82062B4D8003BCAF1 /* deltatickTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFC3B7E02062B4D8003BCAF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Jimmy;
+				TargetAttributes = {
+					BF82EAA820652ED70024AEE6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					BFC3B7E72062B4D8003BCAF1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					BFC3B7F72062B4D8003BCAF1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BFC3B7E72062B4D8003BCAF1;
+					};
+				};
+			};
+			buildConfigurationList = BFC3B7E32062B4D8003BCAF1 /* Build configuration list for PBXProject "deltatick" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFC3B7DF2062B4D8003BCAF1;
+			productRefGroup = BFC3B7E92062B4D8003BCAF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFC3B7E72062B4D8003BCAF1 /* deltatick */,
+				BF82EAA820652ED70024AEE6 /* deltatickLauncher */,
+				BFC3B7F72062B4D8003BCAF1 /* deltatickTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF82EAA720652ED70024AEE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF82EAAE20652ED70024AEE6 /* Assets.xcassets in Resources */,
+				BF82EAB120652ED70024AEE6 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC3B7E62062B4D8003BCAF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC3B83A20639012003BCAF1 /* SyncViewController.xib in Resources */,
+				BF82EA9C2065162E0024AEE6 /* Localizable.strings in Resources */,
+				BFC3B7EE2062B4D8003BCAF1 /* Assets.xcassets in Resources */,
+				BFC3B7F12062B4D8003BCAF1 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC3B7F62062B4D8003BCAF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF56F57C2065570000E77CE2 /* CreateMigrationToken.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8EE7F20F3FF44FDFEBE1DFF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-deltatick-deltatickTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9370413C2D2E2555243A0B2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-deltatick-deltatickTests/Pods-deltatick-deltatickTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-deltatick-deltatickTests/Pods-deltatick-deltatickTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B349990C4AF41F89B04FF27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-deltatick/Pods-deltatick-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-deltatick/Pods-deltatick-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDD0B2D4961346FE1BAA1DAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-deltatick-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7EDE338553A2EFD143E7051 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-deltatick-deltatickTests/Pods-deltatick-deltatickTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F778BB45F737B8B630AEB86D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-deltatick/Pods-deltatick-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF82EAA520652ED70024AEE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF82EAAC20652ED70024AEE6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC3B7E42062B4D8003BCAF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF82EAA420651B4D0024AEE6 /* MetricType.swift in Sources */,
+				BFE5B97F2063B7930091F5B4 /* MigrationStatusResponse.swift in Sources */,
+				BF56F56E206535CA00E77CE2 /* AutoStartupHelper.swift in Sources */,
+				BFC3B8142062B79D003BCAF1 /* AuthenticationPlugin.swift in Sources */,
+				BFE5B98A2063B8C50091F5B4 /* SyncRouter.swift in Sources */,
+				BFC3B8212062BFA4003BCAF1 /* StatusItemPresenter.swift in Sources */,
+				BFE5B98C2063B8C50091F5B4 /* SyncViewController.swift in Sources */,
+				BFE5B9892063B8C50091F5B4 /* SyncWorker.swift in Sources */,
+				BFC3B8262062BFA4003BCAF1 /* StatusItemInteractor.swift in Sources */,
+				BFC3B8292062C221003BCAF1 /* KeychainSwift+Extension.swift in Sources */,
+				BFE5B9812063B83A0091F5B4 /* MigrationStatusRequest.swift in Sources */,
+				BF82EA9720643E650024AEE6 /* RefreshInterval.swift in Sources */,
+				BFE5B98D2063B8C50091F5B4 /* SyncInteractor.swift in Sources */,
+				BFC3B82F20638423003BCAF1 /* Device.swift in Sources */,
+				BF56F57920654B0600E77CE2 /* DelayHelper.swift in Sources */,
+				BFC3B8222062BFA4003BCAF1 /* StatusItemWorker.swift in Sources */,
+				BFC3B8312063876E003BCAF1 /* UserDefaults+Extension.swift in Sources */,
+				BF82EAA2206519B30024AEE6 /* Balance.swift in Sources */,
+				BFC3B8102062B631003BCAF1 /* DeltaAPI.swift in Sources */,
+				BFE5B97D2063B2530091F5B4 /* NSImage+Extension.swift in Sources */,
+				BFC3B8162062B839003BCAF1 /* RegisterRequest.swift in Sources */,
+				BFC3B8232062BFA4003BCAF1 /* StatusItemRouter.swift in Sources */,
+				BFC3B83520638D9A003BCAF1 /* MigrationTokenRequest.swift in Sources */,
+				BFE5B9882063B8C50091F5B4 /* SyncPresenter.swift in Sources */,
+				BFC3B8332063884A003BCAF1 /* MigrationTokenResponse.swift in Sources */,
+				BF82EAA0206519A90024AEE6 /* Portfolio.swift in Sources */,
+				BFC3B8252062BFA4003BCAF1 /* StatusItemController.swift in Sources */,
+				BFC3B82B20638401003BCAF1 /* RegisterResponse.swift in Sources */,
+				BFC3B8242062BFA4003BCAF1 /* StatusItemModels.swift in Sources */,
+				BFC3B7EC2062B4D8003BCAF1 /* AppDelegate.swift in Sources */,
+				BF82EA9E2065164B0024AEE6 /* String+Extension.swift in Sources */,
+				BFE5B98B2063B8C50091F5B4 /* SyncModels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC3B7F42062B4D8003BCAF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC3B7FD2062B4D8003BCAF1 /* TestHelper.swift in Sources */,
+				BF56F57520653F0200E77CE2 /* SyncInteractorTests.swift in Sources */,
+				BF56F57720653F0200E77CE2 /* SyncPresenterTests.swift in Sources */,
+				BF56F57620653F0200E77CE2 /* SyncWorkerTests.swift in Sources */,
+				BF56F57420653F0200E77CE2 /* SyncViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFC3B7FA2062B4D8003BCAF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFC3B7E72062B4D8003BCAF1 /* deltatick */;
+			targetProxy = BFC3B7F92062B4D8003BCAF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF82EAAF20652ED70024AEE6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF82EAB020652ED70024AEE6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		BFC3B7EF2062B4D8003BCAF1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFC3B7F02062B4D8003BCAF1 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF82EAB520652ED70024AEE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = deltatickLauncher/deltatickLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GNY93HF8FU;
+				INFOPLIST_FILE = deltatickLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimmy.deltatickLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		BF82EAB620652ED70024AEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = deltatickLauncher/deltatickLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GNY93HF8FU;
+				INFOPLIST_FILE = deltatickLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimmy.deltatickLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		BFC3B7FF2062B4D9003BCAF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BFC3B8002062B4D9003BCAF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		BFC3B8022062B4D9003BCAF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07B7E19B7B9EDC2FBC233C33 /* Pods-deltatick.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "deltatick/Supporting Files/deltatick.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GNY93HF8FU;
+				INFOPLIST_FILE = "$(SRCROOT)/deltatick/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimmy.deltatick;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		BFC3B8032062B4D9003BCAF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8294504A8B297E3B102A43B2 /* Pods-deltatick.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "deltatick/Supporting Files/deltatick.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GNY93HF8FU;
+				INFOPLIST_FILE = "$(SRCROOT)/deltatick/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimmy.deltatick;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		BFC3B8052062B4D9003BCAF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A958D0CC74A006DEB2F12D72 /* Pods-deltatick-deltatickTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GNY93HF8FU;
+				INFOPLIST_FILE = deltatickTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimmy.deltatickTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/deltatick.app/Contents/MacOS/deltatick";
+			};
+			name = Debug;
+		};
+		BFC3B8062062B4D9003BCAF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 099B325CCCDCD2B2C74E559F /* Pods-deltatick-deltatickTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GNY93HF8FU;
+				INFOPLIST_FILE = deltatickTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimmy.deltatickTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/deltatick.app/Contents/MacOS/deltatick";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF82EAB420652ED70024AEE6 /* Build configuration list for PBXNativeTarget "deltatickLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF82EAB520652ED70024AEE6 /* Debug */,
+				BF82EAB620652ED70024AEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFC3B7E32062B4D8003BCAF1 /* Build configuration list for PBXProject "deltatick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFC3B7FF2062B4D9003BCAF1 /* Debug */,
+				BFC3B8002062B4D9003BCAF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFC3B8012062B4D9003BCAF1 /* Build configuration list for PBXNativeTarget "deltatick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFC3B8022062B4D9003BCAF1 /* Debug */,
+				BFC3B8032062B4D9003BCAF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFC3B8042062B4D9003BCAF1 /* Build configuration list for PBXNativeTarget "deltatickTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFC3B8052062B4D9003BCAF1 /* Debug */,
+				BFC3B8062062B4D9003BCAF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFC3B7E02062B4D8003BCAF1 /* Project object */;
+}

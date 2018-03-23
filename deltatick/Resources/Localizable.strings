@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  deltatick
+
+  Created by Jimmy Arts on 23/03/2018.
+  Copyright © 2018 Jimmy. All rights reserved.
+*/
+
+"quit_menu_option" = "Quit";
+"quit_menu_shortcut" = "q";
+"auto_startup_menu_option" = "Launch on startup";
+"refresh_interval_menu_option" = "Refresh interval";
+"display_value_menu_option" = "Status item value";
+
+"status_item_loading" = "Loading";
+"status_item_unknown" = "UNK";
+
+"sync_scan_title" = "Scan the QR code";
+"sync_initializing_title" = "Initializing sync";
+"sync_failed_title" = "Sync failed";
+
+"display_value_worth" = "Total worth";
+"display_value_worthBTC" = "Total worth in BTC";
+"display_value_delta" = "All-time change";
+"display_value_delta24h" = "24h change";
+"display_value_deltaBTC" = "All-time change in BTC";
+"display_value_deltaBTC24h" = "24h change in BTC";
+"display_value_percentage" = "All-time change in %";
+"display_value_percentage24h" = "24h change in %";

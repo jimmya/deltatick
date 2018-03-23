@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SyncViewController" customModule="deltatick" customModuleProvider="target">
+            <connections>
+                <outlet property="codeImageView" destination="UAs-Gy-CSk" id="6ho-O8-0KA"/>
+                <outlet property="loadingLabel" destination="ymJ-Jv-LRm" id="dRH-An-E0m"/>
+                <outlet property="progressIndicator" destination="MMa-PP-q3l" id="gFX-ny-n5R"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="270"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UAs-Gy-CSk">
+                    <rect key="frame" x="20" y="20" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="2pw-zQ-anH"/>
+                        <constraint firstAttribute="width" constant="200" id="bPA-3H-TlK"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="q3I-Kg-Xs9"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ymJ-Jv-LRm">
+                    <rect key="frame" x="63" y="240" width="115" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Scan the QR Code" id="vF7-ZG-d2C">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="MMa-PP-q3l">
+                    <rect key="frame" x="184" y="240" width="16" height="16"/>
+                </progressIndicator>
+            </subviews>
+            <constraints>
+                <constraint firstItem="MMa-PP-q3l" firstAttribute="leading" secondItem="ymJ-Jv-LRm" secondAttribute="trailing" constant="8" id="4mX-e8-RqF"/>
+                <constraint firstItem="UAs-Gy-CSk" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="5Bw-iE-uwM"/>
+                <constraint firstItem="ymJ-Jv-LRm" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="AIm-OO-mku"/>
+                <constraint firstItem="ymJ-Jv-LRm" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="13" id="B7C-0C-ReD"/>
+                <constraint firstItem="UAs-Gy-CSk" firstAttribute="top" secondItem="ymJ-Jv-LRm" secondAttribute="bottom" constant="20" id="N0C-t7-zlx"/>
+                <constraint firstAttribute="bottom" secondItem="UAs-Gy-CSk" secondAttribute="bottom" constant="20" id="YpG-xH-chk"/>
+                <constraint firstAttribute="trailing" secondItem="UAs-Gy-CSk" secondAttribute="trailing" constant="20" id="bwi-10-11U"/>
+                <constraint firstItem="MMa-PP-q3l" firstAttribute="centerY" secondItem="ymJ-Jv-LRm" secondAttribute="centerY" constant="1" id="yYR-wM-uY0"/>
+            </constraints>
+        </customView>
+    </objects>
+</document>
