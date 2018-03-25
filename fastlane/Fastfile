@@ -1,5 +1,5 @@
 before_all do
-  sh "pod update"
+  cocoapods
 end
 
 lane :test do
