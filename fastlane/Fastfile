@@ -1,0 +1,7 @@
+before_all do
+  cocoapods
+end
+
+lane :test do
+  scan(scheme: "deltatick")
+end

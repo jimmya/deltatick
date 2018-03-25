@@ -5,8 +5,7 @@ use_frameworks!
 target 'deltatick' do
   pod 'Moya/RxSwift'
   pod 'RxCocoa'
-  pod 'SnapKit'
-  pod 'KeychainSwift', '10.0.0'
+  pod 'KeychainSwift'
   
   target 'deltatickTests' do
       inherit! :complete
