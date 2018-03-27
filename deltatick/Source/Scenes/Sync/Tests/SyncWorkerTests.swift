@@ -85,6 +85,66 @@ final class SyncWorkerTests: XCTestCase {
         }
     }
     
+    func testGetMigrationStatusShouldCallProvider() {
+        // Given
+        let token = "MockToken"
+        
+        // When
+        sut.getMigrationStatusForToken(token, success: { (_) in
+            
+        }) { (_) in
+            
+        }
+        
+        // Then
+        XCTAssertTrue(mockProvider.getMigrationStatusCalled)
+        XCTAssertEqual(mockProvider.getMigrationStatusRequest?.token, token)
+    }
+    
+    func testGetMigrationStatusSuccessShouldCallCompletion() {
+        // Given
+        let expect = expectation(description: "Completion")
+        let mock = TestHelper.loadMock(as: MigrationStatusResponse.self, fromFile: "GetMigrationStatus")
+        sut.api.mockDataClosure = { _ in
+            return mock!.data
+        }
+        
+        // When
+        var status: MigrationStatusResponse.Status?
+        sut.getMigrationStatusForToken("", success: { (responseStatus) in
+            status = responseStatus
+            expect.fulfill()
+        }) { (_) in
+            
+        }
+        
+        // Then
+        waitForExpectations(timeout: 1) { (_) in
+            XCTAssertNotNil(status)
+            XCTAssertEqual(status, mock!.object!.status)
+        }
+    }
+    
+    func testGetMigrationStatusFailedShouldCallCompletion() {
+        // Given
+        let expect = expectation(description: "Completion")
+        sut.api.provider = MockProvider(endpointClosure: MoyaProvider.requestFailureEndpointMapping)
+        
+        // When
+        var responseError: Error?
+        sut.getMigrationStatusForToken("", success: { (_) in
+            
+        }) { (error) in
+            responseError = error
+            expect.fulfill()
+        }
+        
+        // Then
+        waitForExpectations(timeout: 1) { (_) in
+            XCTAssertNotNil(responseError)
+        }
+    }
+    
     // MARK: Test doubles
     
     final class MockProvider: MoyaProvider<Delta> {

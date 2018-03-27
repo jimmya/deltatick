@@ -60,6 +60,10 @@ final class SyncViewController: NSViewController, SyncDisplayLogic {
     
     // MARK: - Actions
     
+    @IBAction func cancelButtonPressed(sender: NSButton) {
+        delegate?.viewControllerRequestsPoverClose(self)
+    }
+    
     func displayMigrationToken(viewModel: Sync.MigrationToken.ViewModel) {
         let size = codeImageView.bounds.size
         if let codeImage = NSImage.createSyncImageForCode(viewModel.code, size: size) {

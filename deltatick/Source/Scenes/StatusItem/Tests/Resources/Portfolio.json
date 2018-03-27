@@ -1,0 +1,18 @@
+{
+    "balance": {
+        "worth": 1500.5,
+        "worth24h": 250.2,
+        "cost": 330,
+        "deltaTotal": 240,
+        "delta24h": 50.6,
+        "percentageTotal": 12.5,
+        "percentage24h": 3.22,
+        "worthInBtc": 0.02,
+        "worth24hInBtc": 0.034,
+        "costInBtc": 0.02,
+        "deltaTotalInBtc": 0.24,
+        "delta24hInBtc": 0.234,
+        "percentageTotalInBtc": 0.213,
+        "percentage24hInBtc": 0.1234
+    }
+}

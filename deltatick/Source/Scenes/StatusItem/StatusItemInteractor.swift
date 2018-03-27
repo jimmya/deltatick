@@ -25,18 +25,21 @@ final class StatusItemInteractor: StatusItemBusinessLogic, StatusItemDataStore {
     private let keychain: KeychainSwift
     private let userDefaults: UserDefaults
     private let startupHelper: AutoStartupHelperLogic
+    private let timerType: Timer.Type
     private var timer: Timer?
     
     init(presenter: StatusItemPresentationLogic, 
          worker: StatusItemWorkerLogic = StatusItemWorker(),
          keychain: KeychainSwift = KeychainSwift(),
          userDefaults: UserDefaults = UserDefaults.standard,
-         startupHelper: AutoStartupHelperLogic = AutoStartupHelper()) {
+         startupHelper: AutoStartupHelperLogic = AutoStartupHelper(),
+         timerType: Timer.Type = Timer.self) {
         self.presenter = presenter
         self.worker = worker
         self.keychain = keychain
         self.userDefaults = userDefaults
         self.startupHelper = startupHelper
+        self.timerType = timerType
     }
     
     func fetchData(request: StatusItem.Fetch.Request) {
@@ -69,7 +72,6 @@ final class StatusItemInteractor: StatusItemBusinessLogic, StatusItemDataStore {
     }
     
     func requestSync(request: StatusItem.Sync.Request) {
-        userDefaults.hasSynced = false
         presenter.presentSync(StatusItem.Sync.Response())
     }
 }
@@ -78,7 +80,7 @@ private extension StatusItemInteractor {
     
     func scheduleDataTimer() {
         let refreshInterval = userDefaults.refreshInterval ?? RefreshInterval.oneMinute
-        timer = Timer.scheduledTimer(withTimeInterval: refreshInterval.timeInterval, repeats: true, block: { [weak self] (_) in
+        timer = timerType.scheduledTimer(withTimeInterval: refreshInterval.timeInterval, repeats: true, block: { [weak self] (_) in
             self?.performFetchData()
         })
     }

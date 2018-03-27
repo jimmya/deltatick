@@ -12,11 +12,14 @@ final class StatusItemPresenter: StatusItemPresentationLogic {
     
     private weak var controller: StatusItemDisplayLogic?
     private let numberFormatter: NumberFormatter
+    private let locale: Locale
     
     init(controller: StatusItemDisplayLogic,
-         numberFormatter: NumberFormatter = NumberFormatter()) {
+         numberFormatter: NumberFormatter = NumberFormatter(),
+         locale: Locale = Locale.current) {
         self.controller = controller
         self.numberFormatter = numberFormatter
+        self.locale = locale
     }
     
     func presentLoadingIndicator() {
@@ -33,7 +36,7 @@ final class StatusItemPresenter: StatusItemPresentationLogic {
     
     func presentData(_ response: StatusItem.Fetch.Response) {
         let value = response.portfolio.balance.valueForMetricType(response.displayMetricType)
-        numberFormatter.locale = Locale.current
+        numberFormatter.locale = locale
         numberFormatter.numberStyle = .currency
         if response.displayMetricType.isBTCValue {
             numberFormatter.currencySymbol = "₿"

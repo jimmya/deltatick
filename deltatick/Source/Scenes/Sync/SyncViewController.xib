@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UAs-Gy-CSk">
-                    <rect key="frame" x="20" y="20" width="200" height="200"/>
+                    <rect key="frame" x="20" y="37" width="200" height="200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="2pw-zQ-anH"/>
                         <constraint firstAttribute="width" constant="200" id="bPA-3H-TlK"/>
@@ -28,7 +28,7 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="q3I-Kg-Xs9"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ymJ-Jv-LRm">
-                    <rect key="frame" x="63" y="240" width="115" height="17"/>
+                    <rect key="frame" x="63" y="245" width="115" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Scan the QR Code" id="vF7-ZG-d2C">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -36,19 +36,35 @@
                     </textFieldCell>
                 </textField>
                 <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="MMa-PP-q3l">
-                    <rect key="frame" x="184" y="240" width="16" height="16"/>
+                    <rect key="frame" x="184" y="245" width="16" height="16"/>
                 </progressIndicator>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWg-KR-czm">
+                    <rect key="frame" x="79" y="1" width="82" height="32"/>
+                    <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="hmF-f9-Jea">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="cancelButtonPressedWithSender:" target="-2" id="eV2-su-HGi"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
+                <constraint firstItem="cWg-KR-czm" firstAttribute="top" secondItem="UAs-Gy-CSk" secondAttribute="bottom" constant="8" id="22S-DE-Fz3"/>
                 <constraint firstItem="MMa-PP-q3l" firstAttribute="leading" secondItem="ymJ-Jv-LRm" secondAttribute="trailing" constant="8" id="4mX-e8-RqF"/>
                 <constraint firstItem="UAs-Gy-CSk" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="5Bw-iE-uwM"/>
                 <constraint firstItem="ymJ-Jv-LRm" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="AIm-OO-mku"/>
-                <constraint firstItem="ymJ-Jv-LRm" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="13" id="B7C-0C-ReD"/>
-                <constraint firstItem="UAs-Gy-CSk" firstAttribute="top" secondItem="ymJ-Jv-LRm" secondAttribute="bottom" constant="20" id="N0C-t7-zlx"/>
-                <constraint firstAttribute="bottom" secondItem="UAs-Gy-CSk" secondAttribute="bottom" constant="20" id="YpG-xH-chk"/>
+                <constraint firstItem="ymJ-Jv-LRm" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="B7C-0C-ReD"/>
+                <constraint firstItem="UAs-Gy-CSk" firstAttribute="top" secondItem="ymJ-Jv-LRm" secondAttribute="bottom" constant="8" id="N0C-t7-zlx"/>
+                <constraint firstItem="cWg-KR-czm" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="NPN-GR-I8T"/>
                 <constraint firstAttribute="trailing" secondItem="UAs-Gy-CSk" secondAttribute="trailing" constant="20" id="bwi-10-11U"/>
+                <constraint firstAttribute="bottom" secondItem="cWg-KR-czm" secondAttribute="bottom" constant="8" id="kgK-cg-QDJ"/>
                 <constraint firstItem="MMa-PP-q3l" firstAttribute="centerY" secondItem="ymJ-Jv-LRm" secondAttribute="centerY" constant="1" id="yYR-wM-uY0"/>
             </constraints>
+            <point key="canvasLocation" x="139" y="239"/>
         </customView>
     </objects>
 </document>

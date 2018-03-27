@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MigrationStatusResponse: Codable {
+struct MigrationStatusResponse: Codable, Equatable {
     
     enum Status: String, Codable {
         case started = "STARTED"

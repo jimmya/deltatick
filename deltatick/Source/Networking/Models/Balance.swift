@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Balance: Codable {
+struct Balance: Codable, Equatable {
     
     let worth: Double
     let worth24h: Double

@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		9A76B7002CBFF70107F0509B /* Pods_deltatick_deltatickTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92C55144FBBA9F6AA8AA27A /* Pods_deltatick_deltatickTests.framework */; };
 		A1AB3B1E0BBD5D6691EAA9C0 /* Pods_deltatick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7841607B5AAF56283E803D99 /* Pods_deltatick.framework */; };
+		BF2C2EFF2067EA4E00019A07 /* OverviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2EF92067EA4E00019A07 /* OverviewPresenter.swift */; };
+		BF2C2F002067EA4E00019A07 /* OverviewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2EFA2067EA4E00019A07 /* OverviewWorker.swift */; };
+		BF2C2F012067EA4E00019A07 /* OverviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2EFB2067EA4E00019A07 /* OverviewRouter.swift */; };
+		BF2C2F022067EA4E00019A07 /* OverviewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2EFC2067EA4E00019A07 /* OverviewModels.swift */; };
+		BF2C2F032067EA4E00019A07 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2EFD2067EA4E00019A07 /* OverviewViewController.swift */; };
+		BF2C2F042067EA4E00019A07 /* OverviewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2EFE2067EA4E00019A07 /* OverviewInteractor.swift */; };
+		BF2C2F082067EA8A00019A07 /* OverviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2C2F062067EA8A00019A07 /* OverviewViewController.xib */; };
+		BF2C2F0E2068BCDB00019A07 /* StatusItemControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2F0A2068BCDB00019A07 /* StatusItemControllerTests.swift */; };
+		BF2C2F0F2068BCDB00019A07 /* StatusItemInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2F0B2068BCDB00019A07 /* StatusItemInteractorTests.swift */; };
+		BF2C2F102068BCDB00019A07 /* StatusItemWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2F0C2068BCDB00019A07 /* StatusItemWorkerTests.swift */; };
+		BF2C2F112068BCDB00019A07 /* StatusItemPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2F0D2068BCDB00019A07 /* StatusItemPresenterTests.swift */; };
 		BF56F56E206535CA00E77CE2 /* AutoStartupHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F56D206535CA00E77CE2 /* AutoStartupHelper.swift */; };
 		BF56F57420653F0200E77CE2 /* SyncViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F57020653F0200E77CE2 /* SyncViewControllerTests.swift */; };
 		BF56F57520653F0200E77CE2 /* SyncInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F57120653F0200E77CE2 /* SyncInteractorTests.swift */; };
@@ -56,6 +67,8 @@
 		BFE5B98B2063B8C50091F5B4 /* SyncModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B9852063B8C50091F5B4 /* SyncModels.swift */; };
 		BFE5B98C2063B8C50091F5B4 /* SyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B9862063B8C50091F5B4 /* SyncViewController.swift */; };
 		BFE5B98D2063B8C50091F5B4 /* SyncInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B9872063B8C50091F5B4 /* SyncInteractor.swift */; };
+		BFF1866020693EC800356FAB /* GetMigrationStatus.json in Resources */ = {isa = PBXBuildFile; fileRef = BFF1865F20693EC800356FAB /* GetMigrationStatus.json */; };
+		BFF18664206941C800356FAB /* Portfolio.json in Resources */ = {isa = PBXBuildFile; fileRef = BFF18662206940A900356FAB /* Portfolio.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +100,17 @@
 		7841607B5AAF56283E803D99 /* Pods_deltatick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_deltatick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8294504A8B297E3B102A43B2 /* Pods-deltatick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deltatick.release.xcconfig"; path = "Pods/Target Support Files/Pods-deltatick/Pods-deltatick.release.xcconfig"; sourceTree = "<group>"; };
 		A958D0CC74A006DEB2F12D72 /* Pods-deltatick-deltatickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deltatick-deltatickTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-deltatick-deltatickTests/Pods-deltatick-deltatickTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF2C2EF92067EA4E00019A07 /* OverviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewPresenter.swift; sourceTree = "<group>"; };
+		BF2C2EFA2067EA4E00019A07 /* OverviewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewWorker.swift; sourceTree = "<group>"; };
+		BF2C2EFB2067EA4E00019A07 /* OverviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewRouter.swift; sourceTree = "<group>"; };
+		BF2C2EFC2067EA4E00019A07 /* OverviewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewModels.swift; sourceTree = "<group>"; };
+		BF2C2EFD2067EA4E00019A07 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		BF2C2EFE2067EA4E00019A07 /* OverviewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewInteractor.swift; sourceTree = "<group>"; };
+		BF2C2F062067EA8A00019A07 /* OverviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewViewController.xib; sourceTree = "<group>"; };
+		BF2C2F0A2068BCDB00019A07 /* StatusItemControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemControllerTests.swift; sourceTree = "<group>"; };
+		BF2C2F0B2068BCDB00019A07 /* StatusItemInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemInteractorTests.swift; sourceTree = "<group>"; };
+		BF2C2F0C2068BCDB00019A07 /* StatusItemWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemWorkerTests.swift; sourceTree = "<group>"; };
+		BF2C2F0D2068BCDB00019A07 /* StatusItemPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemPresenterTests.swift; sourceTree = "<group>"; };
 		BF56F56D206535CA00E77CE2 /* AutoStartupHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoStartupHelper.swift; sourceTree = "<group>"; };
 		BF56F57020653F0200E77CE2 /* SyncViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncViewControllerTests.swift; sourceTree = "<group>"; };
 		BF56F57120653F0200E77CE2 /* SyncInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncInteractorTests.swift; sourceTree = "<group>"; };
@@ -141,6 +165,8 @@
 		BFE5B9852063B8C50091F5B4 /* SyncModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncModels.swift; sourceTree = "<group>"; };
 		BFE5B9862063B8C50091F5B4 /* SyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncViewController.swift; sourceTree = "<group>"; };
 		BFE5B9872063B8C50091F5B4 /* SyncInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncInteractor.swift; sourceTree = "<group>"; };
+		BFF1865F20693EC800356FAB /* GetMigrationStatus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetMigrationStatus.json; sourceTree = "<group>"; };
+		BFF18662206940A900356FAB /* Portfolio.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Portfolio.json; sourceTree = "<group>"; };
 		F92C55144FBBA9F6AA8AA27A /* Pods_deltatick_deltatickTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_deltatick_deltatickTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -183,6 +209,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BF2C2EF82067EA2500019A07 /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C2EF92067EA4E00019A07 /* OverviewPresenter.swift */,
+				BF2C2EFA2067EA4E00019A07 /* OverviewWorker.swift */,
+				BF2C2EFB2067EA4E00019A07 /* OverviewRouter.swift */,
+				BF2C2EFC2067EA4E00019A07 /* OverviewModels.swift */,
+				BF2C2EFD2067EA4E00019A07 /* OverviewViewController.swift */,
+				BF2C2EFE2067EA4E00019A07 /* OverviewInteractor.swift */,
+				BF2C2F062067EA8A00019A07 /* OverviewViewController.xib */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		BF2C2F092068BCBB00019A07 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C2F0A2068BCDB00019A07 /* StatusItemControllerTests.swift */,
+				BF2C2F0B2068BCDB00019A07 /* StatusItemInteractorTests.swift */,
+				BF2C2F0C2068BCDB00019A07 /* StatusItemWorkerTests.swift */,
+				BF2C2F0D2068BCDB00019A07 /* StatusItemPresenterTests.swift */,
+				BFF18661206940A000356FAB /* Resources */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		BF56F56F20653EE700E77CE2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				BF56F57B2065570000E77CE2 /* CreateMigrationToken.json */,
+				BFF1865F20693EC800356FAB /* GetMigrationStatus.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -346,8 +399,9 @@
 		BFC3B81A2062BF81003BCAF1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				BFC3B83620638FEB003BCAF1 /* Sync */,
+				BF2C2EF82067EA2500019A07 /* Overview */,
 				BFC3B8272062BFA9003BCAF1 /* StatusItem */,
+				BFC3B83620638FEB003BCAF1 /* Sync */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -361,6 +415,7 @@
 				BFC3B81E2062BFA4003BCAF1 /* StatusItemModels.swift */,
 				BFC3B81F2062BFA4003BCAF1 /* StatusItemController.swift */,
 				BFC3B8202062BFA4003BCAF1 /* StatusItemInteractor.swift */,
+				BF2C2F092068BCBB00019A07 /* Tests */,
 			);
 			path = StatusItem;
 			sourceTree = "<group>";
@@ -378,6 +433,14 @@
 				BF56F56F20653EE700E77CE2 /* Tests */,
 			);
 			path = Sync;
+			sourceTree = "<group>";
+		};
+		BFF18661206940A000356FAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BFF18662206940A900356FAB /* Portfolio.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E5923504727EE711298F5635 /* Frameworks */ = {
@@ -512,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC3B83A20639012003BCAF1 /* SyncViewController.xib in Resources */,
+				BF2C2F082067EA8A00019A07 /* OverviewViewController.xib in Resources */,
 				BF82EA9C2065162E0024AEE6 /* Localizable.strings in Resources */,
 				BFC3B7EE2062B4D8003BCAF1 /* Assets.xcassets in Resources */,
 				BFC3B7F12062B4D8003BCAF1 /* MainMenu.xib in Resources */,
@@ -523,6 +587,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF56F57C2065570000E77CE2 /* CreateMigrationToken.json in Resources */,
+				BFF1866020693EC800356FAB /* GetMigrationStatus.json in Resources */,
+				BFF18664206941C800356FAB /* Portfolio.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,12 +730,15 @@
 			files = (
 				BF82EAA420651B4D0024AEE6 /* MetricType.swift in Sources */,
 				BFE5B97F2063B7930091F5B4 /* MigrationStatusResponse.swift in Sources */,
+				BF2C2F022067EA4E00019A07 /* OverviewModels.swift in Sources */,
 				BF56F56E206535CA00E77CE2 /* AutoStartupHelper.swift in Sources */,
 				BFC3B8142062B79D003BCAF1 /* AuthenticationPlugin.swift in Sources */,
 				BFE5B98A2063B8C50091F5B4 /* SyncRouter.swift in Sources */,
 				BFC3B8212062BFA4003BCAF1 /* StatusItemPresenter.swift in Sources */,
+				BF2C2F042067EA4E00019A07 /* OverviewInteractor.swift in Sources */,
 				BFE5B98C2063B8C50091F5B4 /* SyncViewController.swift in Sources */,
 				BFE5B9892063B8C50091F5B4 /* SyncWorker.swift in Sources */,
+				BF2C2EFF2067EA4E00019A07 /* OverviewPresenter.swift in Sources */,
 				BFC3B8262062BFA4003BCAF1 /* StatusItemInteractor.swift in Sources */,
 				BFC3B8292062C221003BCAF1 /* KeychainSwift+Extension.swift in Sources */,
 				BFE5B9812063B83A0091F5B4 /* MigrationStatusRequest.swift in Sources */,
@@ -679,14 +748,17 @@
 				BF56F57920654B0600E77CE2 /* DelayHelper.swift in Sources */,
 				BFC3B8222062BFA4003BCAF1 /* StatusItemWorker.swift in Sources */,
 				BFC3B8312063876E003BCAF1 /* UserDefaults+Extension.swift in Sources */,
+				BF2C2F002067EA4E00019A07 /* OverviewWorker.swift in Sources */,
 				BF82EAA2206519B30024AEE6 /* Balance.swift in Sources */,
 				BFC3B8102062B631003BCAF1 /* DeltaAPI.swift in Sources */,
 				BFE5B97D2063B2530091F5B4 /* NSImage+Extension.swift in Sources */,
 				BFC3B8162062B839003BCAF1 /* RegisterRequest.swift in Sources */,
 				BFC3B8232062BFA4003BCAF1 /* StatusItemRouter.swift in Sources */,
+				BF2C2F012067EA4E00019A07 /* OverviewRouter.swift in Sources */,
 				BFC3B83520638D9A003BCAF1 /* MigrationTokenRequest.swift in Sources */,
 				BFE5B9882063B8C50091F5B4 /* SyncPresenter.swift in Sources */,
 				BFC3B8332063884A003BCAF1 /* MigrationTokenResponse.swift in Sources */,
+				BF2C2F032067EA4E00019A07 /* OverviewViewController.swift in Sources */,
 				BF82EAA0206519A90024AEE6 /* Portfolio.swift in Sources */,
 				BFC3B8252062BFA4003BCAF1 /* StatusItemController.swift in Sources */,
 				BFC3B82B20638401003BCAF1 /* RegisterResponse.swift in Sources */,
@@ -702,9 +774,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC3B7FD2062B4D8003BCAF1 /* TestHelper.swift in Sources */,
+				BF2C2F0F2068BCDB00019A07 /* StatusItemInteractorTests.swift in Sources */,
+				BF2C2F0E2068BCDB00019A07 /* StatusItemControllerTests.swift in Sources */,
 				BF56F57520653F0200E77CE2 /* SyncInteractorTests.swift in Sources */,
 				BF56F57720653F0200E77CE2 /* SyncPresenterTests.swift in Sources */,
+				BF2C2F112068BCDB00019A07 /* StatusItemPresenterTests.swift in Sources */,
 				BF56F57620653F0200E77CE2 /* SyncWorkerTests.swift in Sources */,
+				BF2C2F102068BCDB00019A07 /* StatusItemWorkerTests.swift in Sources */,
 				BF56F57420653F0200E77CE2 /* SyncViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -884,7 +960,6 @@
 			baseConfigurationReference = 07B7E19B7B9EDC2FBC233C33 /* Pods-deltatick.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "deltatick/Supporting Files/deltatick.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -904,7 +979,6 @@
 			baseConfigurationReference = 8294504A8B297E3B102A43B2 /* Pods-deltatick.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "deltatick/Supporting Files/deltatick.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MigrationStatusRequest: Codable {
+struct MigrationStatusRequest: Codable, Equatable {
     
     let token: String
 }

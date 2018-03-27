@@ -6,11 +6,11 @@ enum StatusItem {
     
     enum Fetch {
         struct Request { }
-        struct Response {
+        struct Response: Equatable {
             let portfolio: Portfolio
             let displayMetricType: MetricType
         }
-        struct ViewModel {
+        struct ViewModel: Equatable {
             let buttonTitle: String
         }
     }
@@ -18,7 +18,7 @@ enum StatusItem {
     enum Sync {
         struct Request { }
         struct Response { }
-        struct ViewModel { }
+        struct ViewModel: Equatable { }
     }
     
     enum Error {
