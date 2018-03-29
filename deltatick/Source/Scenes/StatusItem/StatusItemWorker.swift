@@ -45,10 +45,10 @@ final class StatusItemWorker: StatusItemWorkerLogic {
     }
     
     func register(success: @escaping (Device) -> (), failure: @escaping (Error) -> ()) {
-        let systemName = ProcessInfo.processInfo.operatingSystemVersionString
-        let name = Host.current().name ?? "Unknown"
-        let currency = Locale.current.currencyCode ?? "UNK"
-        let registerRequest = RegisterRequest(deviceId: uuid.uuidString, name: name, systemName: systemName, appVersion: "1.0.0", currency: currency, timezone: TimeZone.current.identifier)
+        let systemName = processInfo.operatingSystemVersionString
+        let name = host.name ?? "Unknown"
+        let currency = locale.currencyCode ?? "UNK"
+        let registerRequest = RegisterRequest(deviceId: uuid.uuidString, name: name, systemName: systemName, appVersion: "1.0.0", currency: currency, timezone: timeZone.identifier)
         api.register(request: registerRequest)
             .request()
             .map(RegisterResponse.self)

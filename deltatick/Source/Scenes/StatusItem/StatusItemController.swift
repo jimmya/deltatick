@@ -1,6 +1,5 @@
 import Cocoa
 import Foundation
-import KeychainSwift
 
 protocol StatusItemDisplayLogic: class {
     
@@ -16,16 +15,13 @@ final class StatusItemController: StatusItemDisplayLogic {
     // MARK: Object lifecycle
     
     private let statusItem: NSStatusItem
-    private let keychain: KeychainSwift
     private let startupHelper: AutoStartupHelperLogic
     private let delayHelper: DelayHelperLogic
     
     init(statusItem: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength),
-         keychain: KeychainSwift = KeychainSwift(),
          startupHelper: AutoStartupHelperLogic = AutoStartupHelper(),
          delayHelper: DelayHelperLogic = DelayHelper()) {
         self.statusItem = statusItem
-        self.keychain = keychain
         self.startupHelper = startupHelper
         self.delayHelper = delayHelper
         setup()

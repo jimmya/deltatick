@@ -1,0 +1,8 @@
+{
+    "device": {
+        "id": 12345,
+        "userId": 54321,
+        "deviceId": "MockDeviceID",
+        "token": "MockToken"
+    }
+}

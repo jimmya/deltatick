@@ -3,7 +3,14 @@ import Cocoa
 
 protocol StatusItemRoutingLogic {
     
-    func routeToSyncViewController(sourceButton: NSStatusBarButton)
+    func routeToSyncViewController(sourceButton: NSStatusBarButton, popover: NSPopover)
+}
+
+extension StatusItemRoutingLogic {
+    
+    func routeToSyncViewController(sourceButton: NSStatusBarButton) {
+        routeToSyncViewController(sourceButton: sourceButton, popover: NSPopover())
+    }
 }
 
 protocol StatusItemDataPassing {
@@ -25,13 +32,13 @@ final class StatusItemRouter: StatusItemRoutingLogic, StatusItemDataPassing {
 
     // MARK: Routing
     
-    func routeToSyncViewController(sourceButton: NSStatusBarButton) {
+    func routeToSyncViewController(sourceButton: NSStatusBarButton, popover: NSPopover = NSPopover()) {
         let viewController = SyncViewController()
         viewController.delegate = self
-        popover = NSPopover()
-        popover?.contentViewController = viewController
-        popover?.behavior = .applicationDefined
-        popover?.show(relativeTo: sourceButton.bounds, of: sourceButton, preferredEdge: .maxY)
+        self.popover = popover
+        popover.contentViewController = viewController
+        popover.behavior = .applicationDefined
+        popover.show(relativeTo: sourceButton.bounds, of: sourceButton, preferredEdge: .maxY)
     }
 }
 

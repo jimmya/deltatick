@@ -5,7 +5,7 @@ enum StatusItem {
     // MARK: Use cases
     
     enum Fetch {
-        struct Request { }
+        struct Request: Equatable { }
         struct Response: Equatable {
             let portfolio: Portfolio
             let displayMetricType: MetricType

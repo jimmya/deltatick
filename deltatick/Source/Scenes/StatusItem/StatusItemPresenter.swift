@@ -31,7 +31,7 @@ final class StatusItemPresenter: StatusItemPresentationLogic {
     }
     
     func presentError(_ response: StatusItem.Error.Response) {
-        
+        controller?.displayData(StatusItem.Fetch.ViewModel(buttonTitle: "status_item_error".ls))
     }
     
     func presentData(_ response: StatusItem.Fetch.Response) {

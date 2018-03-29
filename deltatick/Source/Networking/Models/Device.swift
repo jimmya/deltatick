@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Device: Codable {
+struct Device: Codable, Equatable {
     
     let id: Int
     let userId: Int

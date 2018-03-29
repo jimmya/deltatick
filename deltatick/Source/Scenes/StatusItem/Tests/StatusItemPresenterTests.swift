@@ -57,6 +57,19 @@ final class StatusItemPresenterTests: XCTestCase {
         XCTAssertEqual(mockController.displaySyncViewModel, expectedViewModel)
     }
     
+    func testPresentErrorShouldCallController() {
+        // Given
+        let response = StatusItem.Error.Response(error: MockError.mock)
+        let expectedViewModel = StatusItem.Fetch.ViewModel(buttonTitle: "ERR")
+        
+        // When
+        sut.presentError(response)
+        
+        // Then
+        XCTAssertTrue(mockController.displayDataCalled)
+        XCTAssertEqual(mockController.displayDataViewModel, expectedViewModel)
+    }
+    
     func testPresentDataWithBTCDisplayMetricTypeShouldCallController() {
         // Given
         let portfolio = TestHelper.loadMock(as: Portfolio.self, fromFile: "Portfolio")!.object!
@@ -131,6 +144,10 @@ final class StatusItemPresenterTests: XCTestCase {
             displaySyncCalled = true
             displaySyncViewModel = viewModel
         }
+    }
+
+    enum MockError: Error {
+        case mock
     }
     
     final class MockNumberFormatter: NumberFormatter {

@@ -14,6 +14,7 @@
 
 "status_item_loading" = "Loading";
 "status_item_unknown" = "UNK";
+"status_item_error" = "ERR";
 
 "sync_scan_title" = "Scan the QR code";
 "sync_initializing_title" = "Initializing sync";

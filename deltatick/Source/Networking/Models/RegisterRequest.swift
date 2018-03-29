@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RegisterRequest: Codable {
+struct RegisterRequest: Codable, Equatable {
     
     let deviceId: String
     let name: String
