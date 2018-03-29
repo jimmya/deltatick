@@ -63,9 +63,13 @@ private extension StatusItemController {
         menu.addItem(refreshIntervalMenuItem())
         menu.addItem(NSMenuItem.separator())
         
-        let syncMenuItem = NSMenuItem(title: "Sync", action: #selector(syncItemSelected), keyEquivalent: "")
+        let syncMenuItem = NSMenuItem(title: "sync_menu_option".ls, action: #selector(syncItemSelected), keyEquivalent: "")
         syncMenuItem.target = self
         menu.addItem(syncMenuItem)
+        
+        let resetMenuItem = NSMenuItem(title: "reset_menu_option".ls, action: #selector(resetItemSelected), keyEquivalent: "")
+        resetMenuItem.target = self
+        menu.addItem(resetMenuItem)
         
         let autoStartupMenuItem = NSMenuItem(title: "auto_startup_menu_option".ls, action: #selector(autoStartupItemSelected(_:)), keyEquivalent: "")
         autoStartupMenuItem.state = startupHelper.autoStartupEnabled ? .on : .off
@@ -125,6 +129,11 @@ private extension StatusItemController {
     @objc
     func syncItemSelected() {
         interactor.requestSync(request: StatusItem.Sync.Request())
+    }
+    
+    @objc
+    func resetItemSelected() {
+        interactor.requestReset(request: StatusItem.Reset.Request())
     }
     
     @objc

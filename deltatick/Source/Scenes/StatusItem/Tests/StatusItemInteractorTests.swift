@@ -125,6 +125,19 @@ final class StatusItemInteractorTests: XCTestCase {
         XCTAssertTrue(mockWorker.getPortfolioCalled)
     }
     
+    func testFetchDataShouldCallPresenter() {
+        // Given
+        let request = StatusItem.Fetch.Request()
+        mockKeychain.mockGet = "AuthToken"
+        mockUserDefaults.mockBoolResponse = ["hasSynced": true]
+        
+        // When
+        sut.fetchData(request: request)
+        
+        // Then
+        XCTAssertTrue(mockPresenter.presentLoadingIndicatorCalled)
+    }
+    
     func testFetchDataSuccessShouldCallPresenter() {
         // Given
         let request = StatusItem.Fetch.Request()
@@ -310,7 +323,71 @@ final class StatusItemInteractorTests: XCTestCase {
     
     // MARK: Auto startup
     
+    func testUpdateAutoStartupShouldCallStartupHelper() {
+        // Given
+        let value = true
+        let request = StatusItem.UpdateAutoStartup.Request(autoStartup: value)
+        
+        // When
+        sut.updateAutoStartup(request: request)
+        
+        // Then
+        XCTAssertTrue(mockStartupHelper.setAutoStartupEnabledCalled)
+        XCTAssertEqual(mockStartupHelper.setAutoStartupEnabledEnabled, value)
+    }
+    
     // MARK: Request sync
+    
+    func testRequestSyncShouldCallPresenter() {
+        // Given
+        let request = StatusItem.Sync.Request()
+        let expectedResponse = StatusItem.Sync.Response()
+        
+        // When
+        sut.requestSync(request: request)
+        
+        // Then
+        XCTAssertTrue(mockPresenter.presentSyncCalled)
+        XCTAssertEqual(mockPresenter.presentSyncResponse, expectedResponse)
+    }
+    
+    // MARK: Request reset
+    
+    func testRequestResetShouldDeleteAuthToken() {
+        // Given
+        let request = StatusItem.Reset.Request()
+        
+        // When
+        sut.requestReset(request: request)
+        
+        // Then
+        XCTAssertTrue(mockKeychain.deleteCalled)
+        XCTAssertEqual(mockKeychain.deleteKey, "authToken")
+    }
+    
+    func testRequestResetShouldSetHasSyncedFalse() {
+        // Given
+        let request = StatusItem.Reset.Request()
+        
+        // When
+        sut.requestReset(request: request)
+        
+        // Then
+        XCTAssertTrue(mockUserDefaults.setBoolCalled)
+        XCTAssertEqual(mockUserDefaults.setBoolDefaultName, "hasSynced")
+        XCTAssertEqual(mockUserDefaults.setBoolValue, false)
+    }
+    
+    func testRequestResetShouldCallProviderRegister() {
+        // Given
+        let request = StatusItem.Reset.Request()
+        
+        // When
+        sut.requestReset(request: request)
+        
+        // Then
+        XCTAssertTrue(mockWorker.registerCalled)
+    }
     
     // MARK: Test doubles
     
@@ -320,13 +397,16 @@ final class StatusItemInteractorTests: XCTestCase {
     
     final class MockPresenter: StatusItemPresentationLogic {
         
+        var presentLoadingIndicatorCalled = false
         func presentLoadingIndicator() {
-            
+            presentLoadingIndicatorCalled = true
         }
         
         var presentSyncCalled = false
+        var presentSyncResponse: StatusItem.Sync.Response?
         func presentSync(_ response: StatusItem.Sync.Response) {
             presentSyncCalled = true
+            presentSyncResponse = response
         }
         
         var presentErrorCalled = false
@@ -376,6 +456,14 @@ final class StatusItemInteractorTests: XCTestCase {
             setKey = key
             return true
         }
+
+        var deleteCalled = false
+        var deleteKey: String?
+        override func delete(_ key: String) -> Bool {
+            deleteCalled = true
+            deleteKey = key
+            return true
+        }
         
         var mockGet: String?
         override func get(_ key: String) -> String? {
@@ -403,14 +491,26 @@ final class StatusItemInteractorTests: XCTestCase {
             setIntValue = value
             setIntDefaultName = defaultName
         }
+        
+        var setBoolCalled = false
+        var setBoolValue: Bool?
+        var setBoolDefaultName: String?
+        override func set(_ value: Bool, forKey defaultName: String) {
+            setBoolCalled = true
+            setBoolValue = value
+            setBoolDefaultName = defaultName
+        }
     }
     
     final class MockStartupHelper: AutoStartupHelperLogic {
         
         var autoStartupEnabled: Bool = false
         
+        var setAutoStartupEnabledCalled = false
+        var setAutoStartupEnabledEnabled: Bool?
         func setAutoStartupEnabled(_ enabled: Bool) {
-            
+            setAutoStartupEnabledCalled = true
+            setAutoStartupEnabledEnabled = enabled
         }
     }
     

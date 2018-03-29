@@ -68,7 +68,7 @@ final class SyncWorkerTests: XCTestCase {
     func testCreateMigrationTokenErrorShouldCallCompletion() {
         // Given
         let expect = expectation(description: "Completion")
-        sut.api.provider = MockProvider(endpointClosure: MoyaProvider.requestFailureEndpointMapping)
+        sut.api.provider = MockProvider(endpointClosure: MoyaProvider.requestFailureEndpointMapping, stubClosure: MoyaProvider.immediatelyStub)
         
         // When
         var responseError: Error?
@@ -128,7 +128,7 @@ final class SyncWorkerTests: XCTestCase {
     func testGetMigrationStatusFailedShouldCallCompletion() {
         // Given
         let expect = expectation(description: "Completion")
-        sut.api.provider = MockProvider(endpointClosure: MoyaProvider.requestFailureEndpointMapping)
+        sut.api.provider = MockProvider(endpointClosure: MoyaProvider.requestFailureEndpointMapping, stubClosure: MoyaProvider.immediatelyStub)
         
         // When
         var responseError: Error?

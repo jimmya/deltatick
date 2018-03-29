@@ -9,6 +9,7 @@ protocol StatusItemBusinessLogic {
     func updateDisplayMetricType(request: StatusItem.UpdateDisplayMetricType.Request)
     func updateAutoStartup(request: StatusItem.UpdateAutoStartup.Request)
     func requestSync(request: StatusItem.Sync.Request)
+    func requestReset(request: StatusItem.Reset.Request)
 }
 
 protocol StatusItemDataStore {
@@ -73,6 +74,12 @@ final class StatusItemInteractor: StatusItemBusinessLogic, StatusItemDataStore {
     
     func requestSync(request: StatusItem.Sync.Request) {
         presenter.presentSync(StatusItem.Sync.Response())
+    }
+    
+    func requestReset(request: StatusItem.Reset.Request) {
+        keychain.authToken = nil
+        userDefaults.hasSynced = false
+        fetchData(request: StatusItem.Fetch.Request())
     }
 }
 

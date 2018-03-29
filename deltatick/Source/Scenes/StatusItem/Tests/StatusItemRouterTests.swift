@@ -104,5 +104,9 @@ final class StatusItemRouterTests: XCTestCase {
         func requestSync(request: StatusItem.Sync.Request) {
             
         }
+        
+        func requestReset(request: StatusItem.Reset.Request) {
+            
+        }
     }
 }

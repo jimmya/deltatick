@@ -110,6 +110,10 @@ final class StatusItemControllerTests: XCTestCase {
         func requestSync(request: StatusItem.Sync.Request) {
             
         }
+        
+        func requestReset(request: StatusItem.Reset.Request) {
+            
+        }
     }
 
     final class MockRouter: StatusItemRoutingLogic, StatusItemDataPassing {

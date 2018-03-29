@@ -74,7 +74,7 @@ final class StatusItemWorkerTests: XCTestCase {
     func testGetPortfolioFailureShouldCallCompletion() {
         // Given
         let expect = expectation(description: "Completion")
-        sut.api.provider = MockProvider(endpointClosure: MoyaProvider.requestFailureEndpointMapping)
+        sut.api.provider = MockProvider(endpointClosure: MoyaProvider.requestFailureEndpointMapping, stubClosure: MoyaProvider.immediatelyStub)
         
         // When
         var error: Error?
@@ -135,7 +135,7 @@ final class StatusItemWorkerTests: XCTestCase {
     func testRegisterFailureShouldCallCompletion() {
         // Given
         let expect = expectation(description: "Completion")
-        sut.api.provider = MockProvider(endpointClosure: MoyaProvider.requestFailureEndpointMapping)
+        sut.api.provider = MockProvider(endpointClosure: MoyaProvider.requestFailureEndpointMapping, stubClosure: MoyaProvider.immediatelyStub)
         
         // When
         var error: Error?

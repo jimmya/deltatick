@@ -11,6 +11,8 @@
 "auto_startup_menu_option" = "Launch on startup";
 "refresh_interval_menu_option" = "Refresh interval";
 "display_value_menu_option" = "Status item value";
+"sync_menu_option" = "Sync";
+"reset_menu_option" = "Reset";
 
 "status_item_loading" = "Loading";
 "status_item_unknown" = "UNK";

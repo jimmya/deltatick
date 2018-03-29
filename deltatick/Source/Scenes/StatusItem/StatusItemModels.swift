@@ -17,8 +17,12 @@ enum StatusItem {
     
     enum Sync {
         struct Request { }
-        struct Response { }
+        struct Response: Equatable { }
         struct ViewModel: Equatable { }
+    }
+    
+    enum Reset {
+        struct Request { }
     }
     
     enum Error {

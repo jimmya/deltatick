@@ -11,13 +11,6 @@
 		A1AB3B1E0BBD5D6691EAA9C0 /* Pods_deltatick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7841607B5AAF56283E803D99 /* Pods_deltatick.framework */; };
 		BF183E80206BED9C0076EAB0 /* StatusItemRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF183E7F206BED9C0076EAB0 /* StatusItemRouterTests.swift */; };
 		BF183E82206CB88E0076EAB0 /* RegisterResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = BF183E81206CB88E0076EAB0 /* RegisterResponse.json */; };
-		BF2C2EFF2067EA4E00019A07 /* OverviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2EF92067EA4E00019A07 /* OverviewPresenter.swift */; };
-		BF2C2F002067EA4E00019A07 /* OverviewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2EFA2067EA4E00019A07 /* OverviewWorker.swift */; };
-		BF2C2F012067EA4E00019A07 /* OverviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2EFB2067EA4E00019A07 /* OverviewRouter.swift */; };
-		BF2C2F022067EA4E00019A07 /* OverviewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2EFC2067EA4E00019A07 /* OverviewModels.swift */; };
-		BF2C2F032067EA4E00019A07 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2EFD2067EA4E00019A07 /* OverviewViewController.swift */; };
-		BF2C2F042067EA4E00019A07 /* OverviewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2EFE2067EA4E00019A07 /* OverviewInteractor.swift */; };
-		BF2C2F082067EA8A00019A07 /* OverviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2C2F062067EA8A00019A07 /* OverviewViewController.xib */; };
 		BF2C2F0E2068BCDB00019A07 /* StatusItemControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2F0A2068BCDB00019A07 /* StatusItemControllerTests.swift */; };
 		BF2C2F0F2068BCDB00019A07 /* StatusItemInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2F0B2068BCDB00019A07 /* StatusItemInteractorTests.swift */; };
 		BF2C2F102068BCDB00019A07 /* StatusItemWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C2F0C2068BCDB00019A07 /* StatusItemWorkerTests.swift */; };
@@ -40,6 +33,7 @@
 		BF82EAB120652ED70024AEE6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF82EAAF20652ED70024AEE6 /* MainMenu.xib */; };
 		BF82EAB820652F500024AEE6 /* deltatickLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF82EAA920652ED70024AEE6 /* deltatickLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BF82EABA20652F6C0024AEE6 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF82EAB920652F6C0024AEE6 /* ServiceManagement.framework */; };
+		BFB85D7C206D783500946E01 /* BalanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB85D7A206D783200946E01 /* BalanceTests.swift */; };
 		BFC3B7EC2062B4D8003BCAF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3B7EB2062B4D8003BCAF1 /* AppDelegate.swift */; };
 		BFC3B7EE2062B4D8003BCAF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC3B7ED2062B4D8003BCAF1 /* Assets.xcassets */; };
 		BFC3B7F12062B4D8003BCAF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFC3B7EF2062B4D8003BCAF1 /* MainMenu.xib */; };
@@ -104,13 +98,6 @@
 		A958D0CC74A006DEB2F12D72 /* Pods-deltatick-deltatickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deltatick-deltatickTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-deltatick-deltatickTests/Pods-deltatick-deltatickTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF183E7F206BED9C0076EAB0 /* StatusItemRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemRouterTests.swift; sourceTree = "<group>"; };
 		BF183E81206CB88E0076EAB0 /* RegisterResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RegisterResponse.json; sourceTree = "<group>"; };
-		BF2C2EF92067EA4E00019A07 /* OverviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewPresenter.swift; sourceTree = "<group>"; };
-		BF2C2EFA2067EA4E00019A07 /* OverviewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewWorker.swift; sourceTree = "<group>"; };
-		BF2C2EFB2067EA4E00019A07 /* OverviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewRouter.swift; sourceTree = "<group>"; };
-		BF2C2EFC2067EA4E00019A07 /* OverviewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewModels.swift; sourceTree = "<group>"; };
-		BF2C2EFD2067EA4E00019A07 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
-		BF2C2EFE2067EA4E00019A07 /* OverviewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewInteractor.swift; sourceTree = "<group>"; };
-		BF2C2F062067EA8A00019A07 /* OverviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewViewController.xib; sourceTree = "<group>"; };
 		BF2C2F0A2068BCDB00019A07 /* StatusItemControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemControllerTests.swift; sourceTree = "<group>"; };
 		BF2C2F0B2068BCDB00019A07 /* StatusItemInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemInteractorTests.swift; sourceTree = "<group>"; };
 		BF2C2F0C2068BCDB00019A07 /* StatusItemWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemWorkerTests.swift; sourceTree = "<group>"; };
@@ -135,6 +122,7 @@
 		BF82EAB220652ED70024AEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF82EAB320652ED70024AEE6 /* deltatickLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = deltatickLauncher.entitlements; sourceTree = "<group>"; };
 		BF82EAB920652F6C0024AEE6 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		BFB85D7A206D783200946E01 /* BalanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTests.swift; sourceTree = "<group>"; };
 		BFC3B7E82062B4D8003BCAF1 /* deltatick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deltatick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC3B7EB2062B4D8003BCAF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFC3B7ED2062B4D8003BCAF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -213,20 +201,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BF2C2EF82067EA2500019A07 /* Overview */ = {
-			isa = PBXGroup;
-			children = (
-				BF2C2EF92067EA4E00019A07 /* OverviewPresenter.swift */,
-				BF2C2EFA2067EA4E00019A07 /* OverviewWorker.swift */,
-				BF2C2EFB2067EA4E00019A07 /* OverviewRouter.swift */,
-				BF2C2EFC2067EA4E00019A07 /* OverviewModels.swift */,
-				BF2C2EFD2067EA4E00019A07 /* OverviewViewController.swift */,
-				BF2C2EFE2067EA4E00019A07 /* OverviewInteractor.swift */,
-				BF2C2F062067EA8A00019A07 /* OverviewViewController.xib */,
-			);
-			path = Overview;
-			sourceTree = "<group>";
-		};
 		BF2C2F092068BCBB00019A07 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +245,14 @@
 				BF82EAB320652ED70024AEE6 /* deltatickLauncher.entitlements */,
 			);
 			path = deltatickLauncher;
+			sourceTree = "<group>";
+		};
+		BFB85D79206D782400946E01 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BFB85D7A206D783200946E01 /* BalanceTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		BFC3B7DF2062B4D8003BCAF1 = {
@@ -378,6 +360,7 @@
 				BF82EAA320651B4D0024AEE6 /* MetricType.swift */,
 				BF82EA9F206519A90024AEE6 /* Portfolio.swift */,
 				BF82EAA1206519B30024AEE6 /* Balance.swift */,
+				BFB85D79206D782400946E01 /* Tests */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -404,7 +387,6 @@
 		BFC3B81A2062BF81003BCAF1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				BF2C2EF82067EA2500019A07 /* Overview */,
 				BFC3B8272062BFA9003BCAF1 /* StatusItem */,
 				BFC3B83620638FEB003BCAF1 /* Sync */,
 			);
@@ -581,7 +563,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC3B83A20639012003BCAF1 /* SyncViewController.xib in Resources */,
-				BF2C2F082067EA8A00019A07 /* OverviewViewController.xib in Resources */,
 				BF82EA9C2065162E0024AEE6 /* Localizable.strings in Resources */,
 				BFC3B7EE2062B4D8003BCAF1 /* Assets.xcassets in Resources */,
 				BFC3B7F12062B4D8003BCAF1 /* MainMenu.xib in Resources */,
@@ -737,15 +718,12 @@
 			files = (
 				BF82EAA420651B4D0024AEE6 /* MetricType.swift in Sources */,
 				BFE5B97F2063B7930091F5B4 /* MigrationStatusResponse.swift in Sources */,
-				BF2C2F022067EA4E00019A07 /* OverviewModels.swift in Sources */,
 				BF56F56E206535CA00E77CE2 /* AutoStartupHelper.swift in Sources */,
 				BFC3B8142062B79D003BCAF1 /* AuthenticationPlugin.swift in Sources */,
 				BFE5B98A2063B8C50091F5B4 /* SyncRouter.swift in Sources */,
 				BFC3B8212062BFA4003BCAF1 /* StatusItemPresenter.swift in Sources */,
-				BF2C2F042067EA4E00019A07 /* OverviewInteractor.swift in Sources */,
 				BFE5B98C2063B8C50091F5B4 /* SyncViewController.swift in Sources */,
 				BFE5B9892063B8C50091F5B4 /* SyncWorker.swift in Sources */,
-				BF2C2EFF2067EA4E00019A07 /* OverviewPresenter.swift in Sources */,
 				BFC3B8262062BFA4003BCAF1 /* StatusItemInteractor.swift in Sources */,
 				BFC3B8292062C221003BCAF1 /* KeychainSwift+Extension.swift in Sources */,
 				BFE5B9812063B83A0091F5B4 /* MigrationStatusRequest.swift in Sources */,
@@ -755,17 +733,14 @@
 				BF56F57920654B0600E77CE2 /* DelayHelper.swift in Sources */,
 				BFC3B8222062BFA4003BCAF1 /* StatusItemWorker.swift in Sources */,
 				BFC3B8312063876E003BCAF1 /* UserDefaults+Extension.swift in Sources */,
-				BF2C2F002067EA4E00019A07 /* OverviewWorker.swift in Sources */,
 				BF82EAA2206519B30024AEE6 /* Balance.swift in Sources */,
 				BFC3B8102062B631003BCAF1 /* DeltaAPI.swift in Sources */,
 				BFE5B97D2063B2530091F5B4 /* NSImage+Extension.swift in Sources */,
 				BFC3B8162062B839003BCAF1 /* RegisterRequest.swift in Sources */,
 				BFC3B8232062BFA4003BCAF1 /* StatusItemRouter.swift in Sources */,
-				BF2C2F012067EA4E00019A07 /* OverviewRouter.swift in Sources */,
 				BFC3B83520638D9A003BCAF1 /* MigrationTokenRequest.swift in Sources */,
 				BFE5B9882063B8C50091F5B4 /* SyncPresenter.swift in Sources */,
 				BFC3B8332063884A003BCAF1 /* MigrationTokenResponse.swift in Sources */,
-				BF2C2F032067EA4E00019A07 /* OverviewViewController.swift in Sources */,
 				BF82EAA0206519A90024AEE6 /* Portfolio.swift in Sources */,
 				BFC3B8252062BFA4003BCAF1 /* StatusItemController.swift in Sources */,
 				BFC3B82B20638401003BCAF1 /* RegisterResponse.swift in Sources */,
@@ -784,6 +759,7 @@
 				BF183E80206BED9C0076EAB0 /* StatusItemRouterTests.swift in Sources */,
 				BF2C2F0F2068BCDB00019A07 /* StatusItemInteractorTests.swift in Sources */,
 				BF2C2F0E2068BCDB00019A07 /* StatusItemControllerTests.swift in Sources */,
+				BFB85D7C206D783500946E01 /* BalanceTests.swift in Sources */,
 				BF56F57520653F0200E77CE2 /* SyncInteractorTests.swift in Sources */,
 				BF56F57720653F0200E77CE2 /* SyncPresenterTests.swift in Sources */,
 				BF2C2F112068BCDB00019A07 /* StatusItemPresenterTests.swift in Sources */,
