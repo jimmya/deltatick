@@ -17,6 +17,7 @@ final class StatusItemWorker: StatusItemWorkerLogic {
     private let host: Host
     private let locale: Locale
     private let timeZone: TimeZone
+    private let bundle: Bundle
     private let disposeBag: DisposeBag
     
     init(uuid: UUID = UUID(),
@@ -24,12 +25,14 @@ final class StatusItemWorker: StatusItemWorkerLogic {
          host: Host = Host.current(),
          locale: Locale = Locale.current,
          timeZone: TimeZone = TimeZone.current,
+         bundle: Bundle = Bundle.main,
          disposeBag: DisposeBag = DisposeBag()) {
         self.uuid = uuid
         self.processInfo = processInfo
         self.host = host
         self.locale = locale
         self.timeZone = timeZone
+        self.bundle = bundle
         self.disposeBag = disposeBag
     }
     
@@ -48,7 +51,13 @@ final class StatusItemWorker: StatusItemWorkerLogic {
         let systemName = processInfo.operatingSystemVersionString
         let name = host.name ?? "Unknown"
         let currency = locale.currencyCode ?? "UNK"
-        let registerRequest = RegisterRequest(deviceId: uuid.uuidString, name: name, systemName: systemName, appVersion: "1.0.0", currency: currency, timezone: timeZone.identifier)
+        let appVersion: String
+        if let version = bundle.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
+            appVersion = version
+        } else {
+            appVersion = ""
+        }
+        let registerRequest = RegisterRequest(deviceId: uuid.uuidString, name: name, systemName: systemName, appVersion: appVersion, currency: currency, timezone: timeZone.identifier)
         api.register(request: registerRequest)
             .request()
             .map(RegisterResponse.self)

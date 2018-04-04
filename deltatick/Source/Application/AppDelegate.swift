@@ -8,6 +8,8 @@
 
 import Cocoa
 import ServiceManagement
+import Fabric
+import Crashlytics
 
 extension Notification.Name {
     static let killLauncher = Notification.Name("killLauncher")
@@ -23,6 +25,8 @@ extension AppDelegate: NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItemController.fetchData()
+        
+        Fabric.with([Crashlytics.self])
         
         let runningApps = NSWorkspace.shared.runningApplications
         let isRunning = !runningApps.filter { $0.bundleIdentifier == AutoStartupHelper.launcherAppId }.isEmpty
